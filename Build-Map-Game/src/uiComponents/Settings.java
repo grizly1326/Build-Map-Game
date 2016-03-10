@@ -6,7 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import menuActionListeners.SettingsBackListener;
+import settingsActionListener.BackListener;
 
 public class Settings{
 	static int numberOfBlocks=0;
@@ -18,7 +18,6 @@ public class Settings{
 		panel.setBounds(10, 10, frame.getWidth()-40, frame.getHeight()-40);		//change this to procedrual in the middle.
 		frame.add(panel);
 		callComponents();
-		System.out.println("Frame");
 	}
 	public static void toggleVisibility(boolean choice){
 		panel.setVisible(choice);
@@ -31,7 +30,7 @@ public class Settings{
 		back.setVisible(true);
 		back.setText("Back");
 		back.setBounds(10, numberOfBlocks*50, panel.getWidth()-30, 50);
-		back.addActionListener(new SettingsBackListener());
+		back.addActionListener(new BackListener());
 		panel.add(back);
 	}
 }

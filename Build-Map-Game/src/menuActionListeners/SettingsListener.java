@@ -6,11 +6,11 @@ import java.awt.event.ActionListener;
 import uiComponents.Menu;
 import uiComponents.Settings;
 
-public class SettingsBackListener implements ActionListener{
+public class SettingsListener implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		Menu.toggleVisibility(true);
-		Settings.toggleVisibility(false);
+		Menu.toggleVisibility(false);
+		Settings.toggleVisibility(true);
 	}
 
 }

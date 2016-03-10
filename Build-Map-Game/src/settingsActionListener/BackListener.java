@@ -1,4 +1,4 @@
-package menuActionListeners;
+package settingsActionListener;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,11 +6,11 @@ import java.awt.event.ActionListener;
 import uiComponents.Menu;
 import uiComponents.Settings;
 
-public class MenuSettingsListener implements ActionListener{
+public class BackListener implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		Menu.toggleVisibility(false);
-		Settings.toggleVisibility(true);
+		Menu.toggleVisibility(true);
+		Settings.toggleVisibility(false);
 	}
 
 }

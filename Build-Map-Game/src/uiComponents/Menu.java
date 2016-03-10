@@ -7,7 +7,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import menuActionListeners.MenuSettingsListener;
+import menuActionListeners.ExitListener;
+import menuActionListeners.PlayListener;
+import menuActionListeners.SettingsListener;
 
 public class Menu{
 	//if menu is not needed make it invisible.
@@ -20,7 +22,6 @@ public class Menu{
 		panel.setBounds(10, 10, frame.getWidth()-40, frame.getHeight()-40);		//change this to procedrual in the middle.
 		frame.add(panel);
 		callComponents();
-		System.out.println("Frame");
 	}
 	public static void toggleVisibility(boolean choice){
 		panel.setVisible(choice);
@@ -35,6 +36,7 @@ public class Menu{
 		play.setVisible(true);
 		play.setText("Play");
 		play.setBounds(10, numberOfBlocks*50, panel.getWidth()-30, 50);
+		play.addActionListener(new PlayListener());
 		panel.add(play);
 	}
 	private static void createExit(){
@@ -43,6 +45,7 @@ public class Menu{
 		exit.setVisible(true);
 		exit.setText("Exit");
 		exit.setBounds(10, numberOfBlocks*50, panel.getWidth()-30, 50);
+		exit.addActionListener(new ExitListener());
 		panel.add(exit);
 	}
 	private static void createSettings(){
@@ -51,7 +54,7 @@ public class Menu{
 		settings.setVisible(true);
 		settings.setBounds(10, numberOfBlocks*50, panel.getWidth()-30, 50);
 		settings.setText("Settings");
-		settings.addActionListener(new MenuSettingsListener());
+		settings.addActionListener(new SettingsListener());
 		panel.add(settings);
 	}
 }
