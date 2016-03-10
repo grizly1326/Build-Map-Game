@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import fieldActionListener.KeyStrokes;
+import fieldActionListener.MouseMovments;
 
 public class Play {
 	static JPanel panel=new JPanel();
@@ -15,6 +16,7 @@ public class Play {
 		panel.setLayout(null);
 		panel.setBounds(0, 0, frame.getWidth(), frame.getHeight());		//change this to procedrual in the middle.
 		panel.addKeyListener(new KeyStrokes());
+		panel.addMouseListener(new MouseMovments());
 		frame.add(panel);
 	}
 	public static void toggleVisibility(boolean choice){

@@ -2,19 +2,13 @@ package ui;
 
 import javax.swing.JFrame;
 
-import uiComponents.Menu;
-import uiComponents.Play;
-import uiComponents.Settings;
+import Load.Initilize;
 
 public class Test {
 
 	public static void main(String[] args) {
 		JFrame frame=new JFrame();
-		frame(frame);
-		Menu.createMenu(frame);
-		Menu.toggleVisibility(true);
-		Settings.createMenu(frame);
-		Play.createField(frame);
+		Initilize.preInit(frame);
 	}
 	public static void frame(JFrame frame){
 		frame.setVisible(true);
