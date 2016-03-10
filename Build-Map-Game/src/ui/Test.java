@@ -3,6 +3,7 @@ package ui;
 import javax.swing.JFrame;
 
 import uiComponents.Menu;
+import uiComponents.Settings;
 
 public class Test {
 
@@ -10,6 +11,8 @@ public class Test {
 		JFrame frame=new JFrame();
 		frame(frame);
 		Menu.createMenu(frame);
+		Menu.toggleVisibility(true);
+		Settings.createMenu(frame);
 	}
 	public static void frame(JFrame frame){
 		frame.setVisible(true);
