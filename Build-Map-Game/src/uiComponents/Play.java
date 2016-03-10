@@ -22,4 +22,7 @@ public class Play {
 	public static void toggleVisibility(boolean choice){
 		panel.setVisible(choice);
 	}
+	public static JPanel getPanel(){
+		return panel;
+	}
 }
