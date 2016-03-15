@@ -3,7 +3,7 @@ package menuActionListeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import Load.Initilize;
+import load.Initilize;
 import uiComponents.Menu;
 import uiComponents.Play;
 

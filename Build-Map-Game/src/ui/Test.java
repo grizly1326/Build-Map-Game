@@ -2,7 +2,7 @@ package ui;
 
 import javax.swing.JFrame;
 
-import Load.Initilize;
+import load.Initilize;
 
 public class Test {
 

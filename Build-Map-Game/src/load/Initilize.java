@@ -1,9 +1,12 @@
-package Load;
+package load;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import buildings.BuildingList;
 import fieldMenu.RightClickMenu;
+import fieldRightClickMenuBuild.Buildings;
+import player.Player;
 import ui.Test;
 import uiComponents.Menu;
 import uiComponents.Play;
@@ -18,7 +21,10 @@ public class Initilize {
 		Play.createField(frame);				//probobly can be moved somewhere else for instance init.
 	}
 	public static void init(JPanel panel){			//in game initilize.
+		PlayerList.addPlayer(new Player("Daniel"));
+		BuildingList.initList();
 		RightClickMenu.createMenu(panel);
+		Buildings.createMenu(panel);
 	}
 	public static void postInit(){
 		

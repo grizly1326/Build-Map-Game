@@ -1,6 +1,7 @@
 package fieldMenu;
 
 import java.awt.Color;
+import java.awt.Point;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -8,7 +9,7 @@ import javax.swing.JPanel;
 import fieldRightClickMenuActionListener.BuildListener;
 import fieldRightClickMenuActionListener.ExitListener;
 
-public class RightClickMenu {
+public class RightClickMenu{
 	static JPanel panel=new JPanel();
 	static int numberOfBlocks=0;
 	static int bHeight=50;
@@ -22,8 +23,8 @@ public class RightClickMenu {
 		panel.setSize(bWidth, numberOfBlocks*bHeight);
 		frame.add(panel);
 	}
-	public static void moveToLocation(int x, int y){
-		panel.setLocation(x, y);
+	public static void moveToLocation(Point point){
+		panel.setLocation(point);
 	}
 	public static void toggleVisibility(boolean choice){
 		panel.setVisible(choice);
@@ -49,5 +50,8 @@ public class RightClickMenu {
 		exit.addActionListener(new BuildListener());
 		numberOfBlocks++;
 		panel.add(exit);
+	}
+	public static Point getLocation() {
+		return panel.getLocation();
 	}
 }
